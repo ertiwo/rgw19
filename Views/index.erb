@@ -1,17 +1,20 @@
 
 <!DOCTYPE html>
-<html>
+<html >
   <head>
     <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Suffragist</title>
-    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
   </head>
   <body class='container'>
+    <div class="view" style="background-image: url('https://i.pinimg.com/originals/91/37/a1/9137a17d0cbc2f856b2f30ac5f9f3599.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <p class="py-5 text-center"></p>
     <p>What's for dinner today?</p>
 <form action='cast' method='post'>
-  <ul class='unstyled'>
+  <ul class="list-group m-4">
     <% Choices.each do |id, text| %>
-      <li>
+      <li class="list-group-item">
         <label class='radio'>
           <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
           <%= text %>
@@ -19,7 +22,10 @@
       </li>
     <% end %>
   </ul>
-  <button type='submit' class='btn btn-primary'>Cast this vote!</button>
+  <button type='submit' class='btn btn-success'>Cast this vote!</button>
 </form>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
